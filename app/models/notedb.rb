@@ -1,0 +1,2 @@
+class Notedb < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<br>
+<h1>Notes</h1>
+<p>Add Note</p>
+<%= form_tag("/note/create") do %>
+  <%= text_field_tag(:content) %>
+  <%= submit_tag("Create") %>
+<% end %>
+<p>Delete Node by id</p>
+<%= form_tag("/note/delete") do %>
+  <%= text_field_tag(:content) %>
+  <%= submit_tag("Delete") %>
+<% end %>
+<p>Available notes</p>
+<ul>
+  <%if @notes.size > 0 %>
+    <% @notes.each do | i | %>
+      <li>
+        <p>ID :
+        <%=i.id %>
+        <a href="/note/<%= i.id %>">
+          <%= i.content %>
+        </p>
+        </a>
+      </li>
+    <%end%>
+  <%else%>
+    <%= "No data" %>
+  <%end%>
+</ul>
