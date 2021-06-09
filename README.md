@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+Start with the request '/note1s'
